@@ -1,0 +1,16 @@
+h1{
+    color: darkmagenta;
+    text-decoration: underline;
+    font-size: 18px;
+
+}
+h2{
+    font-size: 16px;
+    line-height: 0.5;
+}
+li{
+    List-style: none;
+}
+p{
+    text-indent:117px;
+}

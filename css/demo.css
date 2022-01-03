@@ -1,0 +1,24 @@
+h1{
+    color: chocolate;
+}
+p{
+    /*color: rgb(0,244,0);
+     */
+    /*color: #00ff00;*/
+    color: darkmagenta;/* màu chữ*/
+    font-size: 16px;/* cỡ chữ */ /* lấy cỡ chứ X giaxn cách*/
+    font-weight: 400;/* 100-thin,300-light,400-normal,500-medium,600-semi-bold,700-bold,800-extra-bold,900-black*/
+    text-align: left;/* left right center justify*/
+    line-height: 1.5;/* độ cao của dòng*/ /*1.5 x 15px -> 22.5px*/
+    font-family: Arial;/* Kiểu chữ*/
+    text-decoration: none;/*underline gạch dưới. line-through gạch ngang,overline gạch đầu.none */
+    text-indent: 20px; /* lệnh lùi đầu dòng*/
+    width: 800px;
+    background-color: aquamarine; /* màu lên chữ*/
+    border-bottom: 1px solid #000000; /*solid,dashed,dotted*/
+
+}
+a{
+    text-decoration: none;
+    text-transform: none;
+}
