@@ -1,0 +1,94 @@
+*{
+
+}
+body{
+    background-color: snow;
+    color: #242424;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif; /* nếu lỗi dùng sans serif*/
+    text-align: left;
+}
+
+div{
+    width: 350px;
+    height: 350px;
+    border: 1px solid black; /* lệnh chỉnh viền ảnh */
+    /* -top
+    right
+    bottom
+    left
+     */
+    float: left; /* left right, none*/
+    margin: 5px 10px /*15px 20px*/;
+    /*
+    margin - top: 10px
+     margin - right
+      margin -bottom
+       margin -left
+       1 giá trị đầu luôn là TOP
+       2 nhận giá trị theo chiều kim đồng hồ
+        3 giá trị chiếu bị thiếu sẽ lấy chiều ngược lại của nó
+    */
+    padding: 10px; /* khoảng cách khung đâẻy chữ cho đẹp hơn trong ảnh*/
+    box-sizing:border-box;/*   content-box */
+    border-radius: 5px;
+    box-shadow: 0 0 10px red;
+}
+
+img{
+   max-width: 100%; /* lệnh => cho ảnh k vượt qua khối chứa nó, to hơn thì thu nhỏ lại  */
+}
+#tech{
+    background-color: gold;
+
+}
+.tienhep{
+background-color: darkmagenta;
+}
+.mu{
+    color: red;
+}
+#tech p{
+    color: darkblue;
+}
+body .tienhiep p{
+    color: chocolate;
+}
+#tienhiep .tienhiep p{
+
+}
+/* thues thự ưu tiên tác dụng css
+1. thứ tự xuất hiện : xuất hiện sau cao hơn
+2. cha con -> thẻ
+2. class
+3. cấu trúc cha con -> class
+4. id
+5. cha con -> id
+ */
+html body #Khoa #p-Khoa{
+    color: chocolate;
+
+}
+#Khoa #p-Khoa{
+    color: blue;
+}
+
+.xyz #p-Khoa{
+ color:chocolate ;
+}
+#p-Khoa{
+    color: gold;
+}
+.xyz .p-Khoa{
+    color: aqua;
+}
+
+/* thẻ-> class-> id (3 cấp ưu tiên )
+
+ */
+.xyz{
+    background-image: url("../anh/nk.jpg");
+    background-size: cover;
+}

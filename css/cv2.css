@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background: aliceblue;
+    font-size: 14px;
+    line-height: 22px;
+    color: black;
+}
+.bold{
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.semi_bold{
+    font-weight: 500;
+    font-size: 15px;
+
+}
+.cv1{
+    width: 800;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+}
+.cv1 .cv1_left{
+width: 280px;
+    background: gainsboro;
+}
+.cv1 .cv1_left .cv1_anh{
+    width: 100%;
+    height: 280px;
+}
+.cv1 .cv1_left .cv1_anh img{
+    width: 100%;
+    height: 100%;
+}
+.cv1 .cv1_left .cv1_content{
+    padding: 0 25px;
+}
+.cv1 .title{
+    margin-bottom: 2px;
+}
+.cv1 .cv1_left .bold{
+    color: black;
+}
+.cv1 .cv1_left .regular{
+    color: black;
+}
+.cv1 .cv1_item{
+    padding: 25px 0;
+    border-bottom: 2px solid lightslategray;
+}
+.cv1 .cv1_left ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cv1 .cv1_left ul li:last-child{
+    margin-bottom: 0;
+}
+.cv1 .cv1_left ul li .icon{
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #0bb5f4;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 16px;
+    position: relative;
+}
+.cv1 .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.cv1_items .cv1_social ul li{
+    font-size: 15px;
+}
+.cv1 .cv1_right{
+    width: 520px;
+    background: #fff;
+    padding: 25px;
+}.cv1 .cv1_right .bold{
+    color: black;
+ }
+.cv1 .cv1_right .cv1_work ul,
+.cv1 .cv1_right .cv1_education ul{
+    padding: 40px;
+    overflow: hidden;
+}
+
+
+
+
+
+
