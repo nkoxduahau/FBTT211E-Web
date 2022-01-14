@@ -1,16 +1,19 @@
-h1{
-    color: darkmagenta;
-    text-decoration: underline;
-    font-size: 18px;
-
+.fome {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
 }
-h2{
-    font-size: 16px;
-    line-height: 0.5;
+.form{
+    float: left;
+    width: 100%;
+    height: 30px;
 }
-li{
-    List-style: none;
+.fome select{
+    float: left;
+    width: 50%;
+    height: 40px;
+    padding: 0 15px;
 }
-p{
-    text-indent:117px;
+p.a{
+    float: right;
 }
