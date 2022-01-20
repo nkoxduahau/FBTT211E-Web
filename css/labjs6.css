@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tab{
+    border-bottom: 1px solid darkgrey;
+    padding: 0;
+    margin: 0;
+}
+.tab li{
+    display: inline-block;
+}
+.tab li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+a.active{
+    font-weight: bold;
+    background-color: darkgrey;
+    color: chocolate;
+}
+.tabb{
+    display: none;
+}
+.tabb.active{
+    display: block;
+}

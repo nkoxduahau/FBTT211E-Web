@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nguyễn văn Khoa</title>
+    <link rel="stylesheet" href="css/labjs6.css">
+</head>
+<body>
+    <div class="amin">
+        <ul class="tab">
+            <li><a href="#home" class="active nav">Home</a></li>
+            <li><a href="#Profile" class="nav">Profile</a></li>
+            <li><a href="#Messager" class="nav">Messager</a></li>
+            <li><a href="#Settings" class="nav">Settings</a></li>
+        </ul>
+    </div>
+
+   <div class="tab1">
+       <div id="home" class="tabb active">
+           <h1>This is Home content</h1>
+       </div>
+       <div id="Profile" class="tabb">
+           <h1>This is Profile content</h1>
+       </div>
+       <div id="Messager" class="tabb">
+           <h1>This is Messager content</h1>
+       </div>
+       <div id="Settings" class="tabb">
+           <h1>This is Settings content</h1>
+       </div>
+   </div>
+   <script type="text/javascript">
+     const $ = document.querySelector.bind(document)
+     const $$ =document.querySelectorAll.bind(document)
+     const tab1 = $$('.amin')
+
+   </script>
+</body>
+</html>

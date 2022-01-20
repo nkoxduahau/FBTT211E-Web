@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS2</title>
+</head>
+<body>
+<h1 id="aa" class="abc">Nguyễn Văn Khoa Xin Chào</h1>
+<p id="bb">Đây là thuộc tính</p>
+<input type="number" min="1" id="input-min" placeholder="minutes"/><button></button>
+<h2><span id="as">10</span>:<span id="ass">00</span></h2>
+ <script type="text/javascript">
+     // var obj ={};
+     // obj.name = "Nguyễn Văn Khoa";
+     // obj.age = 21;
+     // obj.address = "Cầu Giay Hà Nội";
+     // console.log(obj);
+     // var obj2 = {
+     //     name: "Khoa",
+     //     age: 20,
+     //     address: "Cầu Giay",
+     //     tel:"0338724567",
+     //     run: function () {
+     //         console.log("Hello")
+     //     }
+     // } // khai báo
+ </script>
+  <script type="text/javascript">
+     /*
+     * Viết script để tác động đến giao diện
+     * mỗi 1 phần tử html sẽ luôn có 1 đối tượng để tham chiếu
+     * cái mà chúng ta nhìn thấy chính là các giá trị của thuộc tính đó
+     * */
+     var t = document.getElementById("aa")
+
+     setTimeout(function(){
+         t.style.color = "red";
+         t.innerText = "Hello World"; // đổi tên phần tử H1 khi đổi màu nền
+         t.innerHTML +="<i> FBT APTECH</i>"; // in ngiêng JS
+         t.classList.add("Yêu");
+     },3000);
+     var r = document.getElementById("bb");
+     var f = false;
+     setTimeout(function(){
+         r.style.backgroundColor = "black"
+         if(f == false){
+             r.style.color = "green";
+             f = true;
+         }else{
+             r.style.color = "blue";
+             f = false;
+         }
+     },1000);
+     var y = document.getElementById("as")
+     setTimeout(function(){
+         y.style.color = "red";
+     })
+     var a = document.getElementById("ass")
+     setTimeout(function(){
+         a.style.color = "#385898";
+     })
+     var min=10,sec=0;
+     var span_min = document.getElementById("as")
+     var span_sec = document.getElementById("ass")
+     var tiner = setInterval(function(){
+       //  var m_txt = min<10?("0"+min):min;
+
+         // toán tử 3 ngôi
+         var m_txt = min<10?("0"+min):min;
+
+         // if(m<10){
+         //     m_txt = "0"+min;
+         // }else{
+         //     m_txt = min;
+         // }
+
+         var sec_txt = sec<10?"0"+sec:sec;
+
+         //console.log(m_txt+":"+sec_txt);
+         span_min.innerText = m_txt;
+         span_sec.innerText = sec_txt;
+         sec--;
+         if(sec<0){
+             sec=59;
+             min--;
+         }
+         if(min<0){
+             clearInterval(timer);
+         }
+     },1000);
+  </script>
+</body>
+</html>

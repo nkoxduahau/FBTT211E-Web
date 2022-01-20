@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nguyễn Văn Khoa</title>
+</head>
+<body>
+
+ <script type="text/javascript">
+     var arr = [];
+     while(arr.length<5){
+         var n;
+         do{
+             n = prompt("Nhập 1 Số :");
+             n = parseInt(n);
+         }while (isNaN(n) || n<0 || n>99);
+         if(!arr.includes(n)){
+             arr.push(n);
+         }
+     }
+
+     var tg = false;
+     for(var i=0;i<arr.length;i++){
+         if(r == arr[i]){
+             alert("Chúc mừng");
+             tg= true;
+             break;
+         }
+     }
+     if(tg == false){
+         alert("Chúc bạn may mắn lần sau");
+     }
+ </script>
+</body>
+</html>
