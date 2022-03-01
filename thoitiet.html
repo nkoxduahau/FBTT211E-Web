@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aa</title>
+    <link rel="stylesheet" href="css/thoitiet.css">
+</head>
+<body>
+<h1>Animated Weather Icons</h1>
+
+<div class="icon sun-shower">
+    <div class="cloud"></div>
+    <div class="sun">
+        <div class="rays"></div>
+    </div>
+    <div class="rain"></div>
+</div>
+
+<div class="icon thunder-storm">
+    <div class="cloud"></div>
+    <div class="lightning">
+        <div class="bolt"></div>
+        <div class="bolt"></div>
+    </div>
+</div>
+
+<div class="icon cloudy">
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+</div>
+
+<div class="icon flurries">
+    <div class="cloud"></div>
+    <div class="snow">
+        <div class="flake"></div>
+        <div class="flake"></div>
+    </div>
+</div>
+
+<div class="icon sunny">
+    <div class="sun">
+        <div class="rays"></div>
+    </div>
+</div>
+
+<div class="icon rainy">
+    <div class="cloud"></div>
+    <div class="rain"></div>
+</div>
+<script type="text/javascript" src="jquery/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url:"http://api.openweathermap.org/data/2.5/weather",
+        data:{
+            q:"hanoi,vn",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric"
+        },
+        method:"GET",
+        success:function (rs) { // hàm callback để nhận dữ liệu khi truy vấn thành công
+            var city = rs.name+", "+rs.sys.country;
+            $(".city").text(city);
+            var tp = rs.main.temp;
+            $(".temp").text(tp);
+            var hmp = rs.main.humidity;
+            $(".hump").text(hmp);
+            $(".press").text(rs.main.pressure);
+            var dsc = "";
+            for (var i=0;i<rs.weather.length;i++){
+                dsc += rs.weather[i].description;
+            }
+            $(".desc").text(dsc);
+        }
+    });
+    function changeCity(e) {
+        var v = e.value;// tp maf vừa chọn
+        // gửi ajax kèm tp vừa chọn lên
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/weather",
+            data:{
+                q:"haiphong,vn",
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+                units:"metric"
+            },
+            method:"GET",
+            success:function (rs) { // hàm callback để nhận dữ liệu khi truy vấn thành công
+                var city = rs.name+", "+rs.sys.country;
+                $(".city").text(city);
+                var tp = rs.main.temp;
+                $(".temp").text(tp);
+                var hmp = rs.main.humidity;
+                $(".hump").text(hmp);
+                $(".press").text(rs.main.pressure);
+                var dsc = "";
+                for (var i=0;i<rs.weather.length;i++){
+                    dsc += rs.weather[i].description;
+                }
+                $(".desc").text(dsc);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

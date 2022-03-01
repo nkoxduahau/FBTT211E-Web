@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current weather</title>
+</head>
+<body>
+<select name="city" onchange="changeCity(this)">
+    <option value="hanoi,vn">Hà Nội</option>
+    <option value="saigon,vn">TP HCM</option>
+    <option value="haiphong,vn">Hải Phòng</option>
+</select>
+<h1 class="city">Ha noi, Viet nam</h1>
+<h2>Nhiệt độ: <span class="temp">21</span><sup>o</sup>C</h2>
+<h2>Độ ẩm: <span class="hump">94</span>%</h2>
+<h2>Áp suất: <span class="press">1000</span></h2>
+<p class="desc">overcast clouds</p>
+<script type="text/javascript" src="jquery/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    // dung ajax để lấy dữ liệu về
+    $.ajax({
+        url:"http://api.openweathermap.org/data/2.5/weather",
+        data:{
+            q:"saigon,vn",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric"
+        },
+        method:"GET",
+        success:function (rs) { // hàm callback để nhận dữ liệu khi truy vấn thành công
+            var city = rs.name+", "+rs.sys.country;
+            $(".city").text(city);
+            var tp = rs.main.temp;
+            $(".temp").text(tp);
+            var hmp = rs.main.humidity;
+            $(".hump").text(hmp);
+            $(".press").text(rs.main.pressure);
+            var dsc = "";
+            for (var i=0;i<rs.weather.length;i++){
+                dsc += rs.weather[i].description;
+            }
+            $(".desc").text(dsc);
+        }
+    });
+    function changeCity(e) {
+        var v = e.value;// tp maf vừa chọn
+        // gửi ajax kèm tp vừa chọn lên
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/weather",
+            data:{
+                q:"haiphong,vn",
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+                units:"metric"
+            },
+            method:"GET",
+            success:function (rs) { // hàm callback để nhận dữ liệu khi truy vấn thành công
+                var city = rs.name+", "+rs.sys.country;
+                $(".city").text(city);
+                var tp = rs.main.temp;
+                $(".temp").text(tp);
+                var hmp = rs.main.humidity;
+                $(".hump").text(hmp);
+                $(".press").text(rs.main.pressure);
+                var dsc = "";
+                for (var i=0;i<rs.weather.length;i++){
+                    dsc += rs.weather[i].description;
+                }
+                $(".desc").text(dsc);
+            }
+        });
+    }
+</script>
+</body>
+</html>
